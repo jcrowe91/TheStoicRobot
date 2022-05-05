@@ -93,7 +93,7 @@ namespace TheStoicRobotTwitter
 
             ConsoleLogging.PassMessage($"<{DateTime.Now}> - Bot Tweeting");
 
-            var tweet = await userClient.Tweets.PublishTweetAsync($"\"{randomQuote.QuoteContent}\" \n-{randomQuote.Author}");
+            var tweet = await userClient.Tweets.PublishTweetAsync($"\"{randomQuote.QuoteContent.Trim()}\" \n-{randomQuote.Author}");
 
             ConsoleLogging.GreenConsole();
             ConsoleLogging.PassMessage($"Success! Tweeted {tweet}");
