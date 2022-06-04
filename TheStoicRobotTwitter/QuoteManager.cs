@@ -61,7 +61,7 @@ namespace TheStoicRobotTwitter
             return randomQuote;
         }
 
-        public static async Task TweetAsync(Quote randomQuote)
+        public static async Task TweetAsync(string quote)
         {
             string apiKey = GetAPIKey();
             string apiSecret = GetAPISecret();
@@ -93,11 +93,41 @@ namespace TheStoicRobotTwitter
 
             ConsoleLogging.PassMessage($"<{DateTime.Now}> - Bot Tweeting");
 
-            var tweet = await userClient.Tweets.PublishTweetAsync($"\"{randomQuote.QuoteContent.Trim()}\" \n-{randomQuote.Author}");
+            var tweet = await userClient.Tweets.PublishTweetAsync($"{quote}");
 
             ConsoleLogging.GreenConsole();
             ConsoleLogging.PassMessage($"Success! Tweeted {tweet}");
             Console.ResetColor();
         }
     }
+    #region DEPRECATED CODE
+    /*  FOLLOWING CODE OBSOLETE AS OF 6/3/2022
+     
+    public static Quote RandomeQuote()
+    {
+        Random rng = new();
+        List<Quote> quotes = new List<Quote>();
+
+        string filePath = $@"{Directory.GetCurrentDirectory()}\quotes.csv";
+        List<string> lines = File.ReadAllLines(filePath).ToList();
+
+        foreach (var line in lines)
+        {
+            string[] entries = line.Split(',');
+
+            Quote newQuote = new Quote()
+            {
+                QuoteContent = entries[0],
+                Author = entries[1],
+            };
+
+            quotes.Add(newQuote);
+        }
+
+        var randomQuote = quotes[rng.Next(quotes.Count())];
+        return randomQuote;
+    }
+
+    */
+    #endregion
 }

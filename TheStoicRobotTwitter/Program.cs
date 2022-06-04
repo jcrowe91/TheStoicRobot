@@ -12,6 +12,7 @@ using Tweetinvi.Core.Models;
 using Tweetinvi.Exceptions;
 using Tweetinvi.Models;
 using Tweetinvi.Auth;
+using System.Net.Http;
 
 namespace TheStoicRobotTwitter
 {
@@ -19,12 +20,14 @@ namespace TheStoicRobotTwitter
     {          
         static async Task Main()
         {
-            var randomQuote = QuoteManager.RandomeQuote();    
+            StoicAPICaller caller = new StoicAPICaller(new HttpClient());
+            var quote = caller.GetStoicQuote();
+            ConsoleLogging.PassMessage($"Quote to be tweeted: {quote}");    
 
             ConsoleLogging.PassMessage("TheStoicRobot");
             ConsoleLogging.PassMessage($"<{DateTime.Now}> - Getting Authorization");
 
-            await QuoteManager.TweetAsync(randomQuote);           
+            await QuoteManager.TweetAsync(quote);           
         }        
     }
 }
