@@ -22,7 +22,10 @@ namespace TheStoicRobotTwitter
         {
             StoicAPICaller caller = new StoicAPICaller(new HttpClient());
             var quote = caller.GetStoicQuote();
-            ConsoleLogging.PassMessage($"Quote to be tweeted: {quote}");    
+
+            ConsoleLogging.BlueConsole();
+            ConsoleLogging.PassMessage($"Quote to be tweeted: {quote}");
+            Console.ResetColor();
 
             ConsoleLogging.PassMessage("TheStoicRobot");
             ConsoleLogging.PassMessage($"<{DateTime.Now}> - Getting Authorization");

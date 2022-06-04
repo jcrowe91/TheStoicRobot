@@ -17,5 +17,10 @@ namespace TheStoicRobotTwitter
         {
             Console.ForegroundColor = ConsoleColor.Green;
         }
+
+        public static void BlueConsole()
+        {
+            Console.ForegroundColor = ConsoleColor.Blue;
+        }
     }
 }
