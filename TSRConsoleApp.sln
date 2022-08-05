@@ -5,7 +5,9 @@ VisualStudioVersion = 17.2.32526.322
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheStoicRobotTwitter", "TheStoicRobotTwitter\TheStoicRobotTwitter.csproj", "{25D6EBF6-294E-4722-AE83-1FA168DC7308}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheStoicRobotUI", "TheStoicRobotUI\TheStoicRobotUI.csproj", "{74DDFD6C-D9A2-4ED4-AA44-6E29A636086D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheStoicRobotUI", "TheStoicRobotUI\TheStoicRobotUI.csproj", "{74DDFD6C-D9A2-4ED4-AA44-6E29A636086D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheStoicLibrary", "TheStoicLibrary\TheStoicLibrary.csproj", "{B17F039D-0440-4563-A091-EE47B44791EF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{74DDFD6C-D9A2-4ED4-AA44-6E29A636086D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{74DDFD6C-D9A2-4ED4-AA44-6E29A636086D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{74DDFD6C-D9A2-4ED4-AA44-6E29A636086D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B17F039D-0440-4563-A091-EE47B44791EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B17F039D-0440-4563-A091-EE47B44791EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B17F039D-0440-4563-A091-EE47B44791EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B17F039D-0440-4563-A091-EE47B44791EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

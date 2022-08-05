@@ -45,20 +45,23 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(187, 265);
+            this.label2.Location = new System.Drawing.Point(238, 257);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(293, 25);
+            this.label2.Size = new System.Drawing.Size(193, 15);
             this.label2.TabIndex = 0;
             this.label2.Text = "Would you like to tweet this quote?\r\n";
             // 
             // tweetBtn
             // 
+            this.tweetBtn.BackColor = System.Drawing.SystemColors.Control;
+            this.tweetBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tweetBtn.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.tweetBtn.Location = new System.Drawing.Point(187, 305);
             this.tweetBtn.Name = "tweetBtn";
             this.tweetBtn.Size = new System.Drawing.Size(293, 79);
             this.tweetBtn.TabIndex = 1;
             this.tweetBtn.Text = "Tweet!";
-            this.tweetBtn.UseVisualStyleBackColor = true;
+            this.tweetBtn.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 

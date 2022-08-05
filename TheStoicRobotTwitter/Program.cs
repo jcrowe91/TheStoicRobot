@@ -1,18 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
-using System.Timers;
-using Tweetinvi;
-using Tweetinvi.Core.Models;
-using Tweetinvi.Exceptions;
-using Tweetinvi.Models;
-using Tweetinvi.Auth;
 using System.Net.Http;
+using System.Threading.Tasks;
+using TheStoicLibrary;
 
 namespace TheStoicRobotTwitter
 {
@@ -20,17 +9,19 @@ namespace TheStoicRobotTwitter
     {          
         static async Task Main()
         {
+            ConsoleLogging.PassMessage("Welcome to the TheStoicRobot", ConsoleColor.Yellow);
+
             StoicAPICaller caller = new StoicAPICaller(new HttpClient());
             var quote = caller.GetStoicQuote();
 
-            ConsoleLogging.BlueConsole();
-            ConsoleLogging.PassMessage($"Quote to be tweeted: {quote}");
-            Console.ResetColor();
+            ConsoleLogging.PassMessage($"Quote to be tweeted: {quote}", ConsoleColor.Blue);
 
-            ConsoleLogging.PassMessage("TheStoicRobot");
-            ConsoleLogging.PassMessage($"<{DateTime.Now}> - Getting Authorization");
+            
+            ConsoleLogging.PassMessage($"<{DateTime.Now}> - Getting Authorization", ConsoleColor.DarkRed);
 
-            await QuoteManager.TweetAsync(quote);           
+            await QuoteManager.TweetAsync(quote, ConsoleLogging.PassMessage);
+
+            ConsoleLogging.PassMessage("Success!", ConsoleColor.Green);
         }        
     }
 }

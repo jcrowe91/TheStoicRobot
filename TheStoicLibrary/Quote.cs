@@ -4,13 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TheStoicRobotTwitter
+namespace TheStoicLibrary
 {
     public class Quote
     {
         public string QuoteContent { get; set; }     
         public string Author { get; set; }
-
-       
     }
 }

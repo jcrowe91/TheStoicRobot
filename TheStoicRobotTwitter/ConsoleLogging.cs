@@ -8,19 +8,15 @@ namespace TheStoicRobotTwitter
 {
     public class ConsoleLogging
     {
-        public static void PassMessage(string message)
+        public static void PassMessage(string message, ConsoleColor consoleColor = ConsoleColor.White)
         {
+            Console.ForegroundColor = consoleColor;
+
             Console.WriteLine(message);
+
+            Console.ResetColor();
         }
 
-        public static void GreenConsole()
-        {
-            Console.ForegroundColor = ConsoleColor.Green;
-        }
-
-        public static void BlueConsole()
-        {
-            Console.ForegroundColor = ConsoleColor.Blue;
-        }
+        
     }
 }
