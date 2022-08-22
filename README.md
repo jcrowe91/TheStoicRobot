@@ -4,4 +4,5 @@ Fully automated application that uses Twitter's API and developer platform to tw
 Resources used in this application:<br>
 [TheStoicRobot Twitter page](https://twitter.com/thestoicrobot)<br>
 [Tweetinvi API](https://github.com/linvi/tweetinvi)<br>
-[Stoic Quotes API](https://github.com/tlcheah2/stoic-quote-lambda-public-api): GET https://api.themotivate365.com/stoic-quote<br>
+[Original Stoic Quotes API](https://github.com/tlcheah2/stoic-quote-lambda-public-api): GET https://api.themotivate365.com/stoic-quote<br>
+[Current Stoic Quoteees API](https://stoic-wisdom.com/): GET https://stoic-server.herokuapp.com/random<br>
