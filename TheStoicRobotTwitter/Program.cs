@@ -12,7 +12,7 @@ namespace TheStoicRobotTwitter
             ConsoleLogging.PassMessage("Welcome to the TheStoicRobot", ConsoleColor.Yellow);
 
             StoicAPICaller caller = new StoicAPICaller(new HttpClient());
-            var quote = caller.GetStoicQuote();
+            var quote = caller.GetStoicQuoteAlternative();
 
             ConsoleLogging.PassMessage($"Quote to be tweeted: {quote}", ConsoleColor.Blue);
 
