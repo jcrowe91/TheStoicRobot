@@ -5,4 +5,4 @@ Resources used in this application:<br>
 [TheStoicRobot Twitter page](https://twitter.com/thestoicrobot)<br>
 [Tweetinvi API](https://github.com/linvi/tweetinvi)<br>
 [Original Stoic Quotes API](https://github.com/tlcheah2/stoic-quote-lambda-public-api): GET https://api.themotivate365.com/stoic-quote<br>
-[Current Stoic Quotes API](https://stoic-wisdom.com/): GET https://stoic-server.herokuapp.com/random<br>
+[Alternative Stoic Quotes API](https://stoic-wisdom.com/): GET https://stoic-server.herokuapp.com/random<br>
