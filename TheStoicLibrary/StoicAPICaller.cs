@@ -23,9 +23,10 @@ namespace TheStoicLibrary
         public string GetStoicQuote()
         {
             var stoicResponse = _client.GetStringAsync(stoicQuotesURL).Result;
-            var stoicData = JObject.Parse(stoicResponse).GetValue("data").ToString();
-            var stoicQuote = JObject.Parse(stoicData).GetValue("quote").ToString();
-            var stoicAuthor = JObject.Parse(stoicData).GetValue("author").ToString();
+            
+
+            var stoicQuote = JObject.Parse(stoicResponse).GetValue("quote").ToString();
+            var stoicAuthor = JObject.Parse(stoicResponse).GetValue("author").ToString();
             string tweet = $"\"{stoicQuote}\"\n-{stoicAuthor}";
             return tweet;
         }
