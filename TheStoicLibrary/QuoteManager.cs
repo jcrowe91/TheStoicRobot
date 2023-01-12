@@ -17,7 +17,7 @@ namespace TheStoicLibrary
     public class QuoteManager
     {
         public delegate void LogToConsole(string message, ConsoleColor consoleColor = ConsoleColor.White);
-
+        //CHANGE
 
             
         private static string GetAPIKey()
